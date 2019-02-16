@@ -2,7 +2,7 @@
 An easy to use C++ header only benchmark inspired by Perl's "Benchmark" module.
 
 # Sample
-The sample.cc shows a simple use case for the benchmark - compare the runtimes
+The file sample.cc shows a simple use case for the benchmark - comparing the runtimes
 of various string to double conversion functions.
 
 To build the sample, simply invoke ``make``, then run it like this:
@@ -28,4 +28,3 @@ Beginning with the first output line from left to right, strtod is 1.27% faster 
 2.70% faster than atof and 38.29% faster than sscanf.
 Second line, stod is 1.29% slower than strtod, 1.45% faster than atof and 37.50% faster than sscanf, etc
 until the last line, where sscanf is the slowest of all.
-
