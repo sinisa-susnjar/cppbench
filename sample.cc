@@ -12,10 +12,10 @@ int main()
 
 	// determine the runtimes of various string to double conversions
 	auto rt = cppbench::time(count, {
-		 { "atof",		[&val]() { double d = atof(val.data()); }				}
-		,{ "strtod",	[&val]() { double d = strtod(val.data(), nullptr); }	}
-		,{ "sscanf",	[&val]() { double d; sscanf(val.data(), "%lf", &d); }	}
-		,{ "stod",		[&val]() { double d = stod(val, nullptr); }			}
+		 { "atof",		[val]() { double d = atof(val.data()); }				}
+		,{ "strtod",	[val]() { double d = strtod(val.data(), nullptr); }	}
+		,{ "sscanf",	[val]() { double d; sscanf(val.data(), "%lf", &d); }	}
+		,{ "stod",		[val]() { double d = stod(val, nullptr); }			}
 	});
 
 	// compare the runtimes and create relative speed matrix
