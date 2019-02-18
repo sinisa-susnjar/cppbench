@@ -1,5 +1,7 @@
 #include <iostream>
 #include <iomanip>
+#include <cstring>
+#include <cerrno>
 
 #include "cppbench.h"
 
@@ -28,4 +30,17 @@ int main()
 
 	// default is to print runtimes in microseconds, use milliseconds instead
 	cppbench::print<chrono::milliseconds>(comp);
+
+	cout << endl << "runtimes with min, max, mean, variance and standard deviation" << endl;
+	cout << endl << "nanoseconds" << endl;
+	cppbench::print<chrono::nanoseconds>(rt);
+	cout << endl << "microseconds" << endl;
+	cppbench::print<chrono::microseconds>(rt, 3);
+	cout << endl << "milliseconds" << endl;
+	cppbench::print<chrono::milliseconds>(rt, 5);
+
+	if (cppbench::write("sample", rt))
+		cout << endl << "successfully wrote runtimes to sample-*.txt files" << endl << endl;
+	else
+		cerr << endl << "there were problems: " << strerror(errno) << endl << endl;
 }
