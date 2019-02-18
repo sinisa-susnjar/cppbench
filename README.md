@@ -56,7 +56,7 @@ Second line, atof is 6.25% slower than strtod, 5.27% faster than stod and 38.85%
 until the last line, where sscanf is the slowest of all.
 
 The runtimes of the tests are printed with decreasing time resolutions, including the minimum, maximum and
-average runtimes along with the variance and standard distribution of the tests.
+average runtimes along with the variance and standard deviation of the tests.
 
 Finally a set of text files is written for post-processing, containing the runtime
 results in the same resolution as chrono::high_resolution_clock - two files are
