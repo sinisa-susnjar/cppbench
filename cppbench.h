@@ -157,7 +157,7 @@ namespace cppbench {
 				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.min/conv)
 				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.max/conv)
 				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.avg/conv)
-				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.var/conv)
+				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.var/(conv*conv))
 				<< std::setw(w) << std::fixed << std::setprecision(prec) << (a.second.dev/conv)
 				<< std::endl;
 	}
