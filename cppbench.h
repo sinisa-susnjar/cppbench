@@ -197,6 +197,7 @@ namespace cppbench {
 				if (!dist.good()) return false;
 			}
 		}
+		return true;
 	}
 
 	/**
