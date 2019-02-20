@@ -143,7 +143,7 @@ namespace cppbench {
 	 * \tparam T An optional template parameter used to cast to the desired time resolution.
 	 */
 	template<typename T = std::chrono::microseconds>
-	void print(const runtime_result &result, int prec = 2, int w = 10)
+	void print(const runtime_result &result, int prec = 2, size_t w = 10)
 	{
 		for (const auto &a : result)
 			w = a.second.name.size() > w ? a.second.name.size()+1 : w;
