@@ -80,7 +80,7 @@ namespace cppbench {
 			r.avg = 0;
 
 			// compute running mean, variance and standard deviation (TAOCP, volume 2, 3rd edition, page 232)
-			double old_avg, old_var = 0;
+			double old_avg = 0, old_var = 0;
 
 			std::chrono::high_resolution_clock::duration total = std::chrono::high_resolution_clock::duration::zero();
 			for (int i=0; i < count; ++i) {
